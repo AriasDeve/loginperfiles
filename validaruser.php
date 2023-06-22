@@ -63,11 +63,17 @@
               Te enviamos un código a tu e-mail para que puedas restablecer tu contraseña.
               Si no lo encuentras revisa el Correo No Deseado.
             </label>
-            <div class="form-group mt-3">
+            <div class="form-group mt-3" id="keys">
               <input class="inputc" type="tel" id="key1" maxlength="1" onkeyup="onKeyUp(this, 'key2')" />
               <input class="inputc" type="tel" id="key2" maxlength="1" onkeyup="onKeyUp(this, 'key3')" />
               <input class="inputc" type="tel" id="key3" maxlength="1" onkeyup="onKeyUp(this, 'key4')" />
               <input class="inputc" type="tel" id="key4" maxlength="1" onkeyup="onKeyUp(this, 'comprobar')" />
+            </div>
+            <div class="form-group mt-3 d-none" id="keys-false">
+              <input class="inputc" value="*" type="tel" id="key1" maxlength="1" disable="true"/>
+              <input class="inputc" value="*" type="tel" id="key1" maxlength="1" disable="true"/>
+              <input class="inputc" value="*" type="tel" id="key1" maxlength="1" disable="true"/>
+              <input class="inputc" value="*" type="tel" id="key1" maxlength="1" disable="true"/>
             </div>
             <!-- <button onclick="validarClave()">Verificar código</button> -->
             <!-- <input type="number" maxlength="4" class="form-control" id="clave"> -->
@@ -174,8 +180,10 @@
           //Analizando los datos
           if(datos.status == "PERMITIDO"){
             document.querySelector("#inputs-clave").classList.remove("d-none");
-            document.querySelector("#comprobar").classList.add("d-none");
             document.querySelector("#actualizar").classList.remove("d-none");
+            document.querySelector("#keys").classList.add("d-none");
+            document.querySelector("#keys-false").classList.remove("d-none");
+            document.querySelector("#comprobar").classList.add("d-none");
           }else{
             alert("Clave incorrecta, revise su correo por favor");
           }
