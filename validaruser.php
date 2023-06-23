@@ -69,6 +69,12 @@
               <input class="inputc" type="tel" id="key3" maxlength="1" onkeyup="onKeyUp(this, 'key4')" />
               <input class="inputc" type="tel" id="key4" maxlength="1" onkeyup="onKeyUp(this, 'comprobar')" />
             </div>
+            <div class="form-group mt-3 d-none" id="keys-false">
+              <input class="inputc"  maxlength="1" value="*" readonly/>
+              <input class="inputc"  maxlength="1" value="*" readonly/>
+              <input class="inputc"  maxlength="1" value="*" readonly/>
+              <input class="inputc"  maxlength="1" value="*" readonly/>
+            </div>
             <!-- <button onclick="validarClave()">Verificar código</button> -->
             <!-- <input type="number" maxlength="4" class="form-control" id="clave"> -->
             <div id="inputs-clave" class="d-none">
